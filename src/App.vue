@@ -1,32 +1,35 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <style>
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-SemiBold.ttf) format("truetype");
+}
+body {
+  background-color: #f8f9fa;
+  margin: 0;
+}
+html,
+body,
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: "Poppins", sans-serif;
 }
-
-#nav {
-  padding: 30px;
+h1 {
+  font-size: 45px;
+  margin: 0;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.d-flex {
+  display: flex;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
 }
 </style>

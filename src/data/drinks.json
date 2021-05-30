@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Energy Drink",
+        "logo": "energyDrink.png",
+        "color": "#1D19AC"
+    },
+    {
+        "name": "Coca-Cola",
+        "logo": "coca.png",
+        "color": "#F40009"
+    },
+    {
+        "name": "Jägermeister",
+        "logo": "jager.png",
+        "color": "#0C3C04"
+    },
+    {
+        "name": "Lipton iceTea",
+        "logo": "iceTea.png",
+        "color": "#FFF004"
+    },
+    {
+        "name": "Rhum",
+        "logo": "rhum.png",
+        "color": "#C7E3FF"
+    },
+    {
+        "name": "Whisky",
+        "logo": "whisky.png",
+        "color": "#DA580F"
+    }
+]
