@@ -6,7 +6,7 @@
         :src="require('../assets/icons/close.svg')"
         @click="closeOverlay()"
       />
-      <h1 class="drinkName">
+      <h1 class="drink-name">
         {{ selectedDrink.name }}
       </h1>
     </div>
@@ -55,7 +55,7 @@ export default Vue.extend({
   height: 43px;
   margin-left: 15px;
 }
-.drinkName {
+.drink-name {
   margin: 0 auto;
 }
 </style>

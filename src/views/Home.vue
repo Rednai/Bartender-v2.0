@@ -20,6 +20,7 @@ import Overlay from "../components/Overlay.vue";
 import json from "../data/drinks.json";
 
 export default Vue.extend({
+  name: "Home",
   data: () => {
     return {
       drinks: json,
