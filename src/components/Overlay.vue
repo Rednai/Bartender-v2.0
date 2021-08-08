@@ -2,7 +2,12 @@
   <div>
     <div class="background"></div>
     <div class="overlay">
-      <Quantity :selectedDrink="selectedDrink" @closeOverlay="closeOverlay()" />
+      <component
+        :is="scene"
+        :selectedDrink="selectedDrink"
+        @closeOverlay="closeOverlay"
+        @selectQuantity="selectQuantity"
+      ></component>
     </div>
   </div>
 </template>
@@ -10,6 +15,9 @@
 <script lang="ts">
 import Vue from "vue";
 import Quantity from "./Quantity.vue";
+import Distribution from "./Distribution.vue";
+import DistributionFinish from "./DistributionFinish.vue";
+import { ipcRenderer } from "electron";
 
 export default Vue.extend({
   name: "Overlay",
@@ -19,6 +27,29 @@ export default Vue.extend({
   },
   components: {
     Quantity,
+    Distribution,
+    DistributionFinish,
+  },
+  data() {
+    return {
+      scene: "Quantity",
+    };
+  },
+  methods: {
+    selectQuantity(quantity: string) {
+      ipcRenderer.send("distribution", {
+        drink: this.selectedDrink,
+        quantity: quantity,
+      });
+      ipcRenderer.on("distribution-finish", () => {
+        this.scene = "DistributionFinish";
+        setTimeout(() => {
+          this.closeOverlay();
+          this.scene = "Quantity";
+        }, 3000);
+      });
+      this.scene = "Distribution";
+    },
   },
 });
 </script>

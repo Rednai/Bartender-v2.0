@@ -1,7 +1,7 @@
 <template>
   <div class="drink" :style="{ backgroundColor: color }">
     <span class="helper"></span>
-    <img class="logo" :src="require('../assets/drinks/' + logo)" />
+    <img class="logo" :src="require('../data/drinks/' + logo)" />
   </div>
 </template>
 

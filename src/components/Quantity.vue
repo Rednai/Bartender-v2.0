@@ -19,9 +19,14 @@
         />
       </div>
       <div class="d-flex flex-col">
-        <Dose color="#003483" text="Seigneur" logo="bigDose.png" />
-        <Dose color="#0157D9" text="Papa" logo="mediumDose.png" />
-        <Dose color="#5490E9" text="Mickey" logo="smallDose.png" />
+        <Dose
+          v-for="(item, index) in quantities"
+          :key="index"
+          :color="item.color"
+          :text="item.name"
+          :logo="item.logo"
+          @click.native="selectQuantity(item.name)"
+        />
       </div>
     </div>
   </div>
@@ -45,6 +50,18 @@ export default Vue.extend({
     closeOverlay() {
       this.$emit("closeOverlay");
     },
+    selectQuantity(quantity: string) {
+      this.$emit("selectQuantity", quantity);
+    },
+  },
+  data() {
+    return {
+      quantities: [
+        { color: "#003483", name: "Seigneur", logo: "bigDose.png" },
+        { color: "#0157D9", name: "Papa", logo: "mediumDose.png" },
+        { color: "#5490E9", name: "Mickey", logo: "smallDose.png" },
+      ],
+    };
   },
 });
 </script>
