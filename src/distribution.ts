@@ -1,7 +1,7 @@
 import { ipcMain } from "electron";
 import { Gpio } from "onoff";
-import * as _doses from "./data/doses.json";
-import * as _drinks from "./data/drinks.json";
+import _doses from "./data/doses.json";
+import _drinks from "./data/drinks.json";
 
 interface Pins {
     [index: number]: any
