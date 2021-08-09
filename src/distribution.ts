@@ -24,6 +24,8 @@ let pins: Pins = {};
 // Pins initialisation
 if (!isWin) {
     drinks.forEach(drink => {
+        console.log(drink);
+        console.log(pins);
         pins[drink.pin] = new Gpio(drink.pin, 'high');
     });
 }
