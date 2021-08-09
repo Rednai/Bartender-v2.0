@@ -9,30 +9,30 @@
         "name": "Coca-Cola",
         "logo": "coca.png",
         "color": "#F40009",
-        "pin": 41
+        "pin": 38
     },
     {
         "name": "Jägermeister",
         "logo": "jager.png",
         "color": "#0C3C04",
-        "pin": 42
+        "pin": 37
     },
     {
         "name": "Lipton iceTea",
         "logo": "iceTea.png",
         "color": "#FFF004",
-        "pin": 43
+        "pin": 36
     },
     {
         "name": "Rhum",
         "logo": "rhum.png",
         "color": "#C7E3FF",
-        "pin": 44
+        "pin": 35
     },
     {
         "name": "Whisky",
         "logo": "whisky.png",
         "color": "#DA580F",
-        "pin": 45
+        "pin": 33
     }
 ]
