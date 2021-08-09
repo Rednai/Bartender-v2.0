@@ -25,7 +25,6 @@ let pins: Pins = {};
 if (!isWin) {
     drinks.forEach(drink => {
         pins[drink.pin] = new Gpio(drink.pin, 'high');
-        console.log('Initiation du pin : ' + drink.pin);
     });
 }
 
@@ -33,10 +32,8 @@ ipcMain.on('distribution', (event, arg) => {
     if (isWin) {
         return event.reply('distribution-finish', 'finish');
     }
-    console.log('Fermeture du pin ' + arg.drink.pin + ' pendant ' + doses[arg.quantity] + ' secondes');
     pins[arg.drink.pin].writeSync(Gpio.LOW);
     setTimeout(() => {
-        console.log('Ouverture du pin : ' + arg.drink.pin);
         pins[arg.drink.pin].writeSync(Gpio.HIGH);
         event.reply('distribution-finish', 'finish');
     }, doses[arg.quantity] * 1000);
