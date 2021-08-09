@@ -1,6 +1,9 @@
 <template>
   <div class="d-flex flex-col items-center distribution">
-    <img class="distribution-icon" :src="require('../assets/icons/beerDistributor.png')" />
+    <img
+      class="distribution-icon"
+      :src="require('../assets/icons/beerDistributor.png')"
+    />
     <div class="distribution-text">Distribution en cours ...</div>
   </div>
 </template>

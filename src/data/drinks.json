@@ -2,31 +2,37 @@
     {
         "name": "Energy Drink",
         "logo": "energyDrink.png",
-        "color": "#1D19AC"
+        "color": "#1D19AC",
+        "pin": 40
     },
     {
         "name": "Coca-Cola",
         "logo": "coca.png",
-        "color": "#F40009"
+        "color": "#F40009",
+        "pin": 41
     },
     {
         "name": "Jägermeister",
         "logo": "jager.png",
-        "color": "#0C3C04"
+        "color": "#0C3C04",
+        "pin": 42
     },
     {
         "name": "Lipton iceTea",
         "logo": "iceTea.png",
-        "color": "#FFF004"
+        "color": "#FFF004",
+        "pin": 43
     },
     {
         "name": "Rhum",
         "logo": "rhum.png",
-        "color": "#C7E3FF"
+        "color": "#C7E3FF",
+        "pin": 44
     },
     {
         "name": "Whisky",
         "logo": "whisky.png",
-        "color": "#DA580F"
+        "color": "#DA580F",
+        "pin": 45
     }
 ]
