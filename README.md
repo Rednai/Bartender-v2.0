@@ -1,29 +1,7 @@
-# bartender
+# Bartender V2.0
 
-## Project setup
-```
-npm install
-```
+# Boissons et doses
+Les boissons et les doses peuvent être éditées dans des fichiers `.json` situés dans le répertoire `src/data/`.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Mesures
+Après mesure, il faut 49 sec pour verser 30 cl de liquide.
