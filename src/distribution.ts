@@ -23,9 +23,9 @@ let pins: Pins = {};
 
 // Pins initialisation
 if (!isWin) {
-    // drinks.forEach(drink => {
-    //     pins[drink.pin] = new Gpio(drink.pin, 'high');
-    // });
+    drinks.forEach(drink => {
+        pins[drink.pin] = new Gpio(drink.pin, 'high');
+    });
 }
 
 ipcMain.on('distribution', (event, arg) => {
